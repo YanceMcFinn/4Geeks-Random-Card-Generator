@@ -29,6 +29,21 @@ function randomCard() {
   if (randSuit == "♠" || randSuit == "♣") {
     card.style.color = "black";
   }
+
+  if (randSuit == "♥") {
+    randSuit = "&hearts;";
+  }
+
+  if (randSuit == "♦") {
+    randSuit = "&diams;";
+  }
+  if (randSuit == "♠") {
+    randSuit = "&spades;";
+  }
+  if (randSuit == "♣") {
+    randSuit = "&clubs;";
+  }
+
   if (
     randRank == "J" ||
     randRank == "Q" ||
@@ -168,9 +183,12 @@ function randomCard() {
     </div>`;
   }
 }
-let autoGen = document.getElementById("autoGenButton");
-let stopAutoGen = document.getElementById("stopAutoGenButton");
+let RandomCardBtn = document.getElementById("newCardButton-push");
+let autoGen = document.getElementById("autoGenButton-push");
+let stopAutoGen = document.getElementById("stopAutoGenButton-push");
 let Interval;
+
+RandomCardBtn.onclick = randomCard;
 autoGen.onclick = function() {
   clearInterval(Interval);
   Interval = setInterval(randomCard, 10000);

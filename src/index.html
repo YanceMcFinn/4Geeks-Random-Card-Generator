@@ -34,9 +34,19 @@
               </div> -->
               </div>
         <div id="buttonDiv">
-          <button onclick="randomCard()" id="newCardButton">Generate New Card</button>
-          <button id="autoGenButton">Auto-Generate Cards (every 10 seconds)</button>
-          <button id="stopAutoGenButton">Stop Auto-Gen</button>
+          <button class="pushable" id="newCardButton-push">
+            <span class="front" id="newCardButton-front">
+              Generate New Card
+            </span>
+            <button class="pushable" id="autoGenButton-push">
+              <span class="front" id="autoGenButton-front">
+                Auto-Generate<br>(every 10 seconds)
+              </span>
+              <button class="pushable" id="stopAutoGenButton-push">
+                <span class="front" id="stopAutoGenButton-front">
+                  Stop<br>Auto-Generating
+                </span>
+          </button>
         </div>
       </body>
     </html>
